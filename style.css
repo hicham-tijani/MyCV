@@ -592,6 +592,11 @@ button, a {
   opacity: 0.7;
 }
 
+.github{
+  position: relative;
+  right: 26%;
+}
+
 .box-content-subheader {
   font-size: 14px;
   line-height: 24px;
