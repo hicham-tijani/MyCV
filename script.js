@@ -33,17 +33,5 @@ document.addEventListener('DOMContentLoaded', function () {
 });
 
 
-n =  new Date();
-y = n.getFullYear();
-m = n.getMonth() + 1;
-d = n.getDate();
-h = n.getHours()
-s = n.getMinutes();
-document.getElementById("date").innerHTML = m + "/" + d + "/" + y + "  °  " + h + ":" + s;
-
-
-
-
-
  
 
