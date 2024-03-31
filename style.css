@@ -27,6 +27,7 @@
 .dark:root {
   --app-container: #1f1d2b;
   --app-container: #111827;
+  --project-box-wrapper: #111827;
   --main-color: #fff;
   --secondary-color: rgba(255,255,255,.8);
   --projects-section: #1f2937;
@@ -49,12 +50,13 @@ html, body {
   width: 100%;
   height: 100vh;
   margin: 0;
+  overflow: auto;
 }
 
 body {
   font-family: "DM Sans", sans-serif;
-  overflow: hidden;
   display: flex;
+  overflow: scroll;
   justify-content: center;
   background-color: var(--app-container);
 }
@@ -261,9 +263,10 @@ button, a {
   border-radius: 32px;
   padding: 32px 32px 0 32px;
   overflow: hidden;
-  height: 100%;
+  height: 67%;
   display: flex;
   flex-direction: column;
+  margin-bottom:17px;
 }
 .projects-section-line {
   display: flex;
@@ -491,7 +494,7 @@ button, a {
 }
 .project-boxes.jsListView .project-box-content-header {
   order: 1;
-  max-width: 120px;
+  max-width: 230px;
 }
 .project-boxes.jsListView .project-box-header {
   order: 2;
@@ -526,7 +529,7 @@ button, a {
 }
 
 .project-box {
-  --main-color-card: #dbf6fd;
+  --main-color-card: #e9e7fd;
   border-radius: 30px;
   padding: 16px;
   background-color: var(--main-color-card);
@@ -586,11 +589,15 @@ button, a {
 }
 
 .box-content-header {
-  font-size: 16px;
+  font-size: 17px;
   line-height: 24px;
   font-weight: 700;
   opacity: 0.7;
+  color: #000;
+  align-self: center;
+  margin-right: 50px;
 }
+
 
 .github{
   position: relative;
@@ -885,9 +892,9 @@ a{
 {
 	margin-left: 30px;
 	float: left;
-	height: 300px;
+	height: 30px;
 	width: 65px;
-	background: #F5F5F5;
+	background: transparent;
 	overflow-y: scroll;
 	margin-bottom: 25px;
 }
@@ -908,22 +915,107 @@ a{
 #style-7::-webkit-scrollbar
 {
 	width: 9px;
-	background-color: #F5F5F5;
+	background-color: transparent;
 }
 
 #style-7::-webkit-scrollbar-thumb
 {
 	border-radius: 10px;
-	background-image: -webkit-gradient(linear,
-									   left bottom,
-									   left top,
-									   color-stop(0.44, rgb(160, 131, 212)),
-									   color-stop(0.72, rgb(187, 134, 183)),
-									   color-stop(0.86, #ff84d6));
+  height: 30px;
+background-color: transparent;
 }
 
 
+#style-6::-webkit-scrollbar
+{
+	width: 9px;
+	background-color: transparent;
+}
+
+#style-6::-webkit-scrollbar-thumb
+{
+	border-radius: 10px;
+  height: 30px;
+background-color: #c3cff4;
+}
+
+.projects-section1 {
+  flex: 2;
+  background-color: var(--projects-section);
+  border-radius: 32px;
+  padding: 32px 32px 0 32px;
+  overflow: hidden;
+  height: 67%;
+  align-self: self-end;
+}
+
+.regol{
+  width:57%;
+  overflow-y: auto;
+
+}
+
+.project-box {
+  background-color: #e9e7fd; /* Default background color */
+}
+
+.dark .project-box {
+  background-color: #111827; /* Background color in dark mode */
+}
 
 
+.box-content-header {
+  color: #111827; /* Default color for text */
+}
+
+.dark .box-content-header {
+  color: white; /* Color for text in dark mode */
+}
+
+.desc {
+  color: #111827; /* Default color for text */
+}
+
+.dark .desc {
+  color: var(--secondary-color); /* Color for text in dark mode */
+}
 
 
+.tit {
+  color: #111827; /* Default color for text */
+}
+
+.dark .tit {
+  color: var(--secondary-color); /* Color for text in dark mode */
+}
+
+.row::after {
+  content: "";
+  clear: both;
+  display: table;
+}
+
+.column {
+  width: 100%;
+  padding: 10px;
+  margin-bottom: 20px;
+  box-sizing: border-box;
+  overflow: hidden; /* Ensure contents don't overflow outside the column */
+  display: flex; /* Use flexbox for layout */
+  align-items: center; /* Align items vertically */
+}
+
+.column img {
+  width: 50px; /* Adjust according to your image size */
+  height: auto;
+  margin-right: 10px; /* Add some space between the image and description */
+}
+
+.column .description {
+  text-align: left; /* Align the description section to the left */
+}
+
+.tit{
+position: relative;
+top: 16px;
+}
